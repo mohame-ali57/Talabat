@@ -13,7 +13,7 @@ public class LocationTest extends BaseTest {
 
         LocationPage page = new LocationPage(driver);
 
-        page.selectLocation("Saqqarah");
+        page.selectLocation("maadi");
 
         System.out.println("Selected location successfully");
 

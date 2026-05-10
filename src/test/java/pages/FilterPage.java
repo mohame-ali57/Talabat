@@ -17,6 +17,7 @@ public class FilterPage {
 
     By filterRating = By.id("top_rated-0");
     By filterFreeDelivery = By.id("free_delivery-1");
+    By filterFastDelivery = By.id("fast_delivery(within_30_mins)-2"); //Less than 30 minutes
     By confirmButton = By.cssSelector("button[data-testid='filter-submit-btn']");
     By restaurantCards = By.cssSelector("a[data-testid='restaurant-a']");
 
@@ -34,6 +35,14 @@ public class FilterPage {
         );
         deliveryCheckbox.click();
         System.out.println("Free delivery filter selected");
+    }
+    
+    public void filterByFastDelivery() {
+        WebElement deliveryCheckbox = wait.until(
+            ExpectedConditions.elementToBeClickable(filterFastDelivery)
+        );
+        deliveryCheckbox.click();
+        System.out.println("Fast delivery filter selected");
     }
 
     public void confirmFilters() {
